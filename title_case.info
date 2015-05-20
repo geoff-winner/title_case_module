@@ -1,0 +1,5 @@
+name = Title Case
+desciption = Displays Title Cased Text.
+package = Epicodus Examples
+core = 7.x
+files[] = title_case.module

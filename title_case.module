@@ -1,0 +1,42 @@
+<?php
+
+function title_case_menu() {
+    $items = array();
+    $items['title_case'] = array(
+        'title' => 'Title Case Problem',
+        'page callback' => 'drupal_get_form',
+        'page arguments' => array('title_case_form'),
+        'access callback' => TRUE,
+        'type' => MENU_NORMAL_ITEM,
+    );
+
+    $items['done'] = array(
+        'title' => 'Done',
+        'page callback' => 'title_case_done',
+        'access callback' => TRUE,
+        'type' => MENU_CALLBACK,
+    );
+    return $items;
+}
+
+function title_case_form() {
+    $form['title_goal'] = array(
+        '#title' => 'Title Goal',
+        '#type' => 'textfield',
+        '#description' => t('Please enter the text you would like to Title Case.')
+    );
+
+    $form['submit'] = array(
+        '#type' => 'submit',
+        '#value' => 'Go',
+    );
+
+    return $form;
+}
+
+function title_case_form_submit($form, &$form_state) {
+    $entered_text = $form_state['values']['title_goal'];
+    $input 
+    $titlecase_output = array();
+
+}
