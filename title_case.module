@@ -48,9 +48,9 @@ function title_case_form_submit($form, &$form_state) {
 }
 
 function title_case_done() {
-    $output = " ";
+    $output = " " ;
     foreach ($_SESSION['title_case_output'] as $value) {
-        $output = $output . '<p>' . $value . '</p>';
+        $output = $output . $value . " ";
     }
 
     return "Here it is: $output";
