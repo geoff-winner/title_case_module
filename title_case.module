@@ -36,7 +36,7 @@ function title_case_form() {
 
 function title_case_form_submit($form, &$form_state) {
     $entered_text = $form_state['values']['title_goal'];
-    $tile_case_output = array();
+    $title_case_output = array();
 
     $title_cased = ucfirst($entered_text);
     array_push($title_case_ouput, $title_cased);
