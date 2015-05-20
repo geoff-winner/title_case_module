@@ -36,7 +36,21 @@ function title_case_form() {
 
 function title_case_form_submit($form, &$form_state) {
     $entered_text = $form_state['values']['title_goal'];
-    $input 
-    $titlecase_output = array();
+    $tile_case_output = array();
 
+    $title_cased = ucfirst($entered_text);
+    array_push($title_case_ouput, $title_cased);
+
+    $_SESSION['title_case_output'] = $title_case_output;
+    $form_state['redirect'] = 'done';
+}
+
+function title_case_done() {
+    $output = "<p>";
+    foreach ($_SESSION['title_case_output'] as $value) {
+        $output = $output . '<p>' . $value . '</p>';
+    }
+
+    $output = $output . '</p>';
+    return "Here it is: $output";
 }
